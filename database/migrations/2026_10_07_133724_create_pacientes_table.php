@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('pacientes', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->date('data_nascimento');
-            $table->string('genero');
+            $table->string('nome')->nullable();
+            $table->date('data_nascimento')->nullable();
+            $table->string('genero')->nullable();
             $table->timestamps();
         });
     }

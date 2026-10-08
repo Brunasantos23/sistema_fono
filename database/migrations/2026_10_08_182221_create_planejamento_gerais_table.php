@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('planejamento_gerais', function (Blueprint $table) {
             $table->id();
-            $table->string('objetivo_geral');
-            $table->string('objetivo_especifico');
+            $table->string('objetivo_geral')->nullable();
+            $table->string('objetivo_especifico')->nullable();
             $table->timestamps();
         });
     }

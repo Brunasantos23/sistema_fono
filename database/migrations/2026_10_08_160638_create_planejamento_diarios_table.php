@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('planejamento_diarios', function (Blueprint $table) {
             $table->id();
-            $table->date('data');
-            $table->string('objetivo');
-            $table->string('estrategia');
-            $table->string('resultados');
+            $table->date('data')->nullable();
+            $table->string('objetivo')->nullable();
+            $table->string('estrategia')->nullable();
+            $table->string('resultados')->nullable();
             $table->timestamps();
         });
     }

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('recibos', function (Blueprint $table) {
             $table->id();
-            $table->string('valor');
-            $table->date('data_pagamento');
-            $table->string('forma_pagamento');
-            $table->string('descricao_servico');
+            $table->string('valor')->nullable();
+            $table->date('data_pagamento')->nullable();
+            $table->string('forma_pagamento')->nullable();
+            $table->string('descricao_servico')->nullable();
             $table->timestamps();
         });
     }
