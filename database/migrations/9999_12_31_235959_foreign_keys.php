@@ -67,6 +67,13 @@ return new class extends Migration
              $table->foreignId('paciente_id')->nullable()->constrained('pacientes');
         });
 
+        Schema::table('anamnese_gerais', function (Blueprint $table) {
+            $table->foreignId('historico_paciente_id')->nullable()->constrained('historico_pacientes');
+            $table->foreignId('desenvolvimento_global_id')->nullable()->constrained('desenvolvimento_globais');
+            $table->foreignId('antencedente_id')->nullable()->constrained('antencedente_patologicos');
+            $table->foreignId('profissional_id')->nullable()->constrained('profissionais');
+        });
+
 
 
 

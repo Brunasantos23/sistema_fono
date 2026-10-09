@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('recibos', function (Blueprint $table) {
+        Schema::create('adms', function (Blueprint $table) {
             $table->id();
-            $table->string('valor')->nullable();
-            $table->date('data_pagamento')->nullable();
-            $table->string('forma_pagamento')->nullable();
-            $table->text('descricao_servico')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('recibos');
+        Schema::dropIfExists('adms');
     }
 };

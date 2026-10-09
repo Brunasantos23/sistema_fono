@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('planejamento_diarios', function (Blueprint $table) {
             $table->id();
             $table->date('data')->nullable();
-            $table->string('objetivo')->nullable();
-            $table->string('estrategia')->nullable();
-            $table->string('resultados')->nullable();
+            $table->text('objetivo')->nullable();
+            $table->text('estrategia')->nullable();
+            $table->text('resultados')->nullable();
             $table->timestamps();
         });
     }
