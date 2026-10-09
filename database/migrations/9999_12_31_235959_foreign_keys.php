@@ -74,6 +74,11 @@ return new class extends Migration
             $table->foreignId('profissional_id')->nullable()->constrained('profissionais');
         });
 
+        Schema::create('anamnese_has_pacientes', function (Blueprint $table) {
+            $table->foreignId('anamnese_id')->nullable()->constrained('anamnese_gerais');
+            $table->foreignId('paciente_id')->nullable()->constrained('pacientes');
+         });
+
 
 
 
